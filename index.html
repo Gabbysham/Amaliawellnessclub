@@ -15,169 +15,267 @@
 }
 
 body {
-  background: #eee7dc;
-  color: #3a322b;
+  background: #f3eee6;
+  color: #3b3027;
   font-family: "Montserrat", sans-serif;
 }
 
 header {
+  position: fixed;
+  top: 0;
   width: 100%;
-  padding: 26px 7%;
+  padding: 24px 7%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #f7f1e8;
+  background: rgba(243, 238, 230, 0.72);
+  backdrop-filter: blur(14px);
+  z-index: 10;
 }
 
 .logo {
   font-family: "Cormorant Garamond", serif;
   font-size: 30px;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
 }
 
 nav a {
   margin-left: 24px;
   text-decoration: none;
-  color: #3a322b;
-  font-size: 12px;
-  letter-spacing: 1px;
+  color: #3b3027;
+  font-size: 11px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 
 .book {
   padding: 12px 18px;
-  background: #3a322b;
-  color: #fff;
-  border-radius: 2px;
+  border: 1px solid #3b3027;
+  border-radius: 30px;
 }
 
 .hero {
-  min-height: 86vh;
-  background:
-    linear-gradient(rgba(40,32,25,.2), rgba(40,32,25,.3)),
-    url("https://images.unsplash.com/photo-1600618528240-fb9fc964b853?auto=format&fit=crop&w=1800&q=80");
+  min-height: 100vh;
+  padding: 130px 7% 70px;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 96px;
+  font-weight: 400;
+  line-height: 0.95;
+  margin-bottom: 26px;
+}
+
+.hero p {
+  max-width: 500px;
+  font-size: 17px;
+  line-height: 1.9;
+  color: #6a5a4d;
+}
+
+.hero button {
+  margin-top: 36px;
+  padding: 16px 34px;
+  border: none;
+  background: #3b3027;
+  color: #f8f3eb;
+  border-radius: 40px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.collage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.photo {
+  min-height: 260px;
+  border-radius: 120px 120px 12px 12px;
   background-size: cover;
   background-position: center;
-  display: flex;
-  align-items: center;
-  padding: 8%;
+  box-shadow: 0 25px 60px rgba(72, 55, 40, 0.16);
 }
 
-.hero-text {
-  max-width: 760px;
-  color: #f8f2e9;
+.photo.one {
+  background-image:
+    linear-gradient(rgba(255,244,232,.1), rgba(255,244,232,.1)),
+    url("https://images.unsplash.com/photo-1607008829749-c0f284a4985f?auto=format&fit=crop&w=900&q=80");
 }
 
-.hero-text h1 {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 120px;
-  font-weight: 400;
-  line-height: .9;
+.photo.two {
+  margin-top: 70px;
+  background-image:
+    linear-gradient(rgba(255,244,232,.1), rgba(255,244,232,.1)),
+    url("https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=80");
 }
 
-.hero-text p {
-  margin-top: 24px;
-  font-size: 26px;
-  letter-spacing: 4px;
+.photo.three {
+  border-radius: 14px 14px 140px 140px;
+  background-image:
+    linear-gradient(rgba(255,244,232,.1), rgba(255,244,232,.1)),
+    url("https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=80");
+}
+
+.photo.four {
+  border-radius: 160px;
+  background-image:
+    linear-gradient(rgba(255,244,232,.1), rgba(255,244,232,.1)),
+    url("https://images.unsplash.com/photo-1600428853876-fb5a850b444f?auto=format&fit=crop&w=900&q=80");
 }
 
 .section {
-  padding: 80px 7%;
+  padding: 90px 7%;
 }
 
 .intro {
   text-align: center;
-  max-width: 780px;
+  max-width: 760px;
   margin: auto;
+}
+
+.intro small {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #9b8068;
 }
 
 .intro h2 {
   font-family: "Cormorant Garamond", serif;
-  font-size: 54px;
+  font-size: 64px;
   font-weight: 400;
-  margin-bottom: 20px;
+  margin: 18px 0;
 }
 
 .intro p {
   font-size: 17px;
   line-height: 1.9;
+  color: #6a5a4d;
 }
 
-.banner {
-  margin-top: 70px;
-  height: 360px;
-  border-radius: 28px;
+.shell-section {
+  margin-top: 80px;
+  min-height: 520px;
+  border-radius: 42px;
   background:
-    linear-gradient(rgba(40,32,25,.25), rgba(40,32,25,.25)),
-    url("https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1600&q=80");
+    linear-gradient(rgba(59,48,39,.25), rgba(59,48,39,.25)),
+    url("https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1800&q=80");
   background-size: cover;
   background-position: center;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  text-align: center;
+  align-items: end;
+  padding: 50px;
+  color: white;
 }
 
-.banner h3 {
+.shell-section h3 {
   font-family: "Cormorant Garamond", serif;
-  font-size: 58px;
+  font-size: 72px;
+  font-weight: 400;
+  max-width: 700px;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 26px;
+  margin-top: 80px;
+}
+
+.service {
+  background: #fffaf2;
+  padding: 44px;
+  min-height: 260px;
+  border-radius: 120px 120px 20px 20px;
+  border: 1px solid rgba(91, 72, 55, 0.12);
+}
+
+.service h4 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 38px;
+  font-weight: 400;
+  margin-bottom: 18px;
+}
+
+.service p {
+  color: #6a5a4d;
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+.waitlist {
+  padding: 100px 7%;
+  text-align: center;
+  background: #e7dccc;
+}
+
+.waitlist h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 62px;
   font-weight: 400;
 }
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 22px;
-  margin-top: 70px;
+.waitlist p {
+  margin: 20px auto 34px;
+  max-width: 620px;
+  color: #6a5a4d;
+  line-height: 1.8;
 }
 
-.card {
-  height: 360px;
-  border-radius: 4px;
-  overflow: hidden;
-  position: relative;
-}
-
-.card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.card span {
-  position: absolute;
-  bottom: 28px;
-  left: 28px;
-  color: white;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 34px;
+.waitlist a {
+  display: inline-block;
+  padding: 16px 34px;
+  border-radius: 40px;
+  background: #3b3027;
+  color: #fffaf2;
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 12px;
 }
 
 footer {
-  padding: 50px 7%;
+  padding: 46px 7%;
   text-align: center;
-  background: #3a322b;
-  color: #f7f1e8;
   letter-spacing: 2px;
-  font-size: 13px;
+  font-size: 12px;
+  color: #7b6858;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   nav {
     display: none;
   }
 
-  .hero-text h1 {
-    font-size: 70px;
-  }
-
-  .hero-text p {
-    font-size: 18px;
-  }
-
-  .cards {
+  .hero {
     grid-template-columns: 1fr;
+    padding-top: 120px;
+  }
+
+  .hero h1 {
+    font-size: 68px;
+  }
+
+  .collage {
+    grid-template-columns: 1fr;
+  }
+
+  .photo.two {
+    margin-top: 0;
+  }
+
+  .services {
+    grid-template-columns: 1fr;
+  }
+
+  .shell-section h3 {
+    font-size: 48px;
   }
 }
 </style>
@@ -189,50 +287,72 @@ footer {
   <div class="logo">AMALIA</div>
   <nav>
     <a href="#">Home</a>
-    <a href="#">About</a>
+    <a href="#">The Club</a>
     <a href="#">Wellness</a>
+    <a href="#">Journeys</a>
     <a href="#">Membership</a>
-    <a href="#">Contact</a>
     <a class="book" href="#">Coming Soon</a>
   </nav>
 </header>
 
 <section class="hero">
-  <div class="hero-text">
-    <h1>Wellness</h1>
-    <p>MIND. BODY. SOUL.</p>
+  <div>
+    <h1>Wellness,<br>softly reimagined.</h1>
+    <p>
+      Amalia Wellness Club is a future luxury wellness destination inspired by
+      natural textures, sculptural spaces, intentional care, and calm restoration.
+    </p>
+    <button>Coming Soon</button>
+  </div>
+
+  <div class="collage">
+    <div class="photo one"></div>
+    <div class="photo two"></div>
+    <div class="photo three"></div>
+    <div class="photo four"></div>
   </div>
 </section>
 
 <section class="section">
   <div class="intro">
-    <h2>Amalia Wellness Club</h2>
+    <small>Mind · Body · Beauty · Recovery</small>
+    <h2>A sanctuary for modern wellness.</h2>
     <p>
-      A luxury wellness destination designed for movement, recovery,
-      nourishment, beauty, and intentional living.
+      Designed for movement, nourishment, recovery, beauty, and a more intentional
+      way of living. Amalia blends the feeling of a luxury hotel, private wellness
+      club, and restorative spa.
     </p>
   </div>
 
-  <div class="banner">
-    <h3>Luxury Wellness, Coming Soon</h3>
+  <div class="shell-section">
+    <h3>Natural beauty, thoughtful care, elevated daily rituals.</h3>
   </div>
 
-  <div class="cards">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=900&q=80">
-      <span>Beauty</span>
+  <div class="services">
+    <div class="service">
+      <h4>Movement</h4>
+      <p>Private training, low-impact strength, pilates-inspired sessions, and restorative movement.</p>
     </div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=900&q=80">
-      <span>Recovery</span>
+    <div class="service">
+      <h4>Recovery</h4>
+      <p>Calming rituals, body recovery, stretching, sauna-inspired care, and nervous system support.</p>
     </div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=900&q=80">
-      <span>Nourish</span>
+    <div class="service">
+      <h4>Nourish</h4>
+      <p>Nutrition guidance, wellness planning, beauty-from-within rituals, and lifestyle support.</p>
     </div>
   </div>
+</section>
+
+<section class="waitlist">
+  <h2>Opening in the future.</h2>
+  <p>
+    The first chapter of Amalia Wellness Club is being designed with care.
+    Follow along as the vision comes to life.
+  </p>
+  <a href="#">Join the Waitlist</a>
 </section>
 
 <footer>
