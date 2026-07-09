@@ -1,141 +1,244 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Amalia Wellness Club</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-
-background:
-linear-gradient(rgba(20,20,20,.35),rgba(20,20,20,.35)),
-url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1800&q=80");
-
-background-size:cover;
-background-position:center;
-height:100vh;
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-font-family:Inter,sans-serif;
-
-color:white;
-
-text-align:center;
-
+body {
+  background: #eee7dc;
+  color: #3a322b;
+  font-family: "Montserrat", sans-serif;
 }
 
-.container{
-
-max-width:700px;
-padding:40px;
-
-backdrop-filter:blur(6px);
-
+header {
+  width: 100%;
+  padding: 26px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f7f1e8;
 }
 
-h1{
-
-font-family:"Cormorant Garamond",serif;
-
-font-size:72px;
-
-letter-spacing:8px;
-
-font-weight:500;
-
-margin-bottom:20px;
-
+.logo {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 30px;
+  letter-spacing: 2px;
 }
 
-h2{
-
-font-weight:300;
-
-font-size:22px;
-
-letter-spacing:4px;
-
-margin-bottom:40px;
-
+nav a {
+  margin-left: 24px;
+  text-decoration: none;
+  color: #3a322b;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
-p{
-
-font-size:18px;
-
-line-height:1.8;
-
-opacity:.92;
-
-margin-bottom:45px;
-
+.book {
+  padding: 12px 18px;
+  background: #3a322b;
+  color: #fff;
+  border-radius: 2px;
 }
 
-.button{
-
-display:inline-block;
-
-padding:16px 36px;
-
-border:1px solid white;
-
-text-decoration:none;
-
-color:white;
-
-letter-spacing:2px;
-
-transition:.3s;
-
+.hero {
+  min-height: 86vh;
+  background:
+    linear-gradient(rgba(40,32,25,.2), rgba(40,32,25,.3)),
+    url("https://images.unsplash.com/photo-1600618528240-fb9fc964b853?auto=format&fit=crop&w=1800&q=80");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  padding: 8%;
 }
 
-.button:hover{
-
-background:white;
-
-color:black;
-
+.hero-text {
+  max-width: 760px;
+  color: #f8f2e9;
 }
 
+.hero-text h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 120px;
+  font-weight: 400;
+  line-height: .9;
+}
+
+.hero-text p {
+  margin-top: 24px;
+  font-size: 26px;
+  letter-spacing: 4px;
+}
+
+.section {
+  padding: 80px 7%;
+}
+
+.intro {
+  text-align: center;
+  max-width: 780px;
+  margin: auto;
+}
+
+.intro h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 54px;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.intro p {
+  font-size: 17px;
+  line-height: 1.9;
+}
+
+.banner {
+  margin-top: 70px;
+  height: 360px;
+  border-radius: 28px;
+  background:
+    linear-gradient(rgba(40,32,25,.25), rgba(40,32,25,.25)),
+    url("https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+.banner h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 58px;
+  font-weight: 400;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-top: 70px;
+}
+
+.card {
+  height: 360px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card span {
+  position: absolute;
+  bottom: 28px;
+  left: 28px;
+  color: white;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 34px;
+}
+
+footer {
+  padding: 50px 7%;
+  text-align: center;
+  background: #3a322b;
+  color: #f7f1e8;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+
+@media (max-width: 800px) {
+  nav {
+    display: none;
+  }
+
+  .hero-text h1 {
+    font-size: 70px;
+  }
+
+  .hero-text p {
+    font-size: 18px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
-
 </head>
 
 <body>
 
-<div class="container">
+<header>
+  <div class="logo">AMALIA</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Wellness</a>
+    <a href="#">Membership</a>
+    <a href="#">Contact</a>
+    <a class="book" href="#">Coming Soon</a>
+  </nav>
+</header>
 
-<h1>AMALIA</h1>
+<section class="hero">
+  <div class="hero-text">
+    <h1>Wellness</h1>
+    <p>MIND. BODY. SOUL.</p>
+  </div>
+</section>
 
-<h2>WELLNESS CLUB</h2>
+<section class="section">
+  <div class="intro">
+    <h2>Amalia Wellness Club</h2>
+    <p>
+      A luxury wellness destination designed for movement, recovery,
+      nourishment, beauty, and intentional living.
+    </p>
+  </div>
 
-<p>
+  <div class="banner">
+    <h3>Luxury Wellness, Coming Soon</h3>
+  </div>
 
-Luxury wellness designed to elevate the way you move, recover, nourish, and live.
+  <div class="cards">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?auto=format&fit=crop&w=900&q=80">
+      <span>Beauty</span>
+    </div>
 
-</p>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?auto=format&fit=crop&w=900&q=80">
+      <span>Recovery</span>
+    </div>
 
-<a class="button" href="#">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1596178065887-1198b6148b2b?auto=format&fit=crop&w=900&q=80">
+      <span>Nourish</span>
+    </div>
+  </div>
+</section>
 
-Coming Soon
-
-</a>
-
-</div>
+<footer>
+  AMALIA WELLNESS CLUB · NEW YORK · COMING SOON
+</footer>
 
 </body>
-
+</html>
 </html>
